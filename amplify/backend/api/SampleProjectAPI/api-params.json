@@ -1,0 +1,42 @@
+{
+  "paths": [
+    {
+      "name": "/events",
+      "lambdaFunction": "SampleProjectAPIlamdba",
+      "privacy": {
+        "private": true,
+        "auth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH",
+          "/DELETE"
+        ]
+      },
+      "policyResourceName": "/events"
+    }
+  ],
+  "resourceName": "SampleProjectAPI",
+  "apiName": "SampleProjectAPI",
+  "functionArns": [
+    {
+      "lambdaFunction": "SampleProjectAPIlamdba"
+    }
+  ],
+  "privacy": {
+    "auth": 1,
+    "unauth": 0,
+    "authRoleName": "amplify-sampleproject-dev-94158-authRole",
+    "unAuthRoleName": "amplify-sampleproject-dev-94158-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "SampleProjectAPIlamdba",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}
